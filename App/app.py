@@ -60,7 +60,7 @@ if uploaded_file is not None:
     data = pd.read_excel('JSE Total Companies List_rev1.xlsx', usecols=['Code', 'Company', 'Sector'],header=1)
     
     # filtering data to tickers
-    stock_tickers = data.Code[:10]
+    stock_tickers = data.Code
 
     st.write('')
     st.write('')
