@@ -1,5 +1,4 @@
 # import the required libraries 
-from symbol import global_stmt
 import streamlit as st
 from yahooquery import Ticker
 import yahoo_fin.stock_info as yf
