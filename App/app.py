@@ -61,7 +61,7 @@ if uploaded_file is not None:
     data = pd.read_excel('JSE Total Companies List_rev1.xlsx', usecols=['Code', 'Company', 'Sector'],header=1)
     
     # filtering data to tickers
-    stock_tickers = data.Code[:30]
+    stock_tickers = data.Code
 
     st.write('')
     st.write('')
@@ -119,16 +119,13 @@ if uploaded_file is not None:
             # save useful ticker
             tickers.append(ticker)
 
-            # status of data uploading progress
-            latest_iteration.text(f'Total stock: {(i+1)}/{len(stock_tickers)}')
-            with st.spinner('Wait for it...'):
-                bar.progress((100//len(stock_tickers))*(i+1))  
-                time.sleep(1)
         except:
                 print('')
-    
-    st.balloons()
-    
+
+        # status of data uploading progress
+        latest_iteration.text(f'Total stock: {(i+1)} ({((i+1)/len(stock_tickers))*100}%)')
+        time.sleep(0.1)
+        bar.progress(int((100/len(stock_tickers))*(i+1)))
 
     # displaying required financial indicators
     financial_data = financial_indicators(balance_sheet, income_statement, cashflow_statement,
