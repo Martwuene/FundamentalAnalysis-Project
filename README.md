@@ -21,4 +21,4 @@ https://www.investopedia.com/terms/p/piotroski-score.asp
 
 ## Data App:
 
-Link: https://martwuene-fundamentalanalysis-project-appapp-29473y.streamlitapp.com/
+Link: https://martwuene-fundamentalanalysis-project-appapp-y2irad.streamlitapp.com/
